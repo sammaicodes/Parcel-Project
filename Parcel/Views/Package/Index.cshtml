@@ -1,0 +1,19 @@
+@using Packages.Models;
+
+<h1>Volume of Packages</h1>
+@if (Model.Count == 0)
+{
+  <p>There are no Packages in the list.</p>
+}
+<ul>
+  @* @foreach (Package pack in Model) *@
+
+  @for(int i=1; i <= Model.Count; i++) 
+  {
+    
+    <li>Your total volume for package @i is: @Model[i - 1].TotalVolume</li>
+  }
+</ul>
+<a href="/parcels/new">Add a new package.</a>
+
+
